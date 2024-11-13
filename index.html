@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sedot Wc Daerah Bandung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+        .nav-link {
+            position: relative;
+            overflow: hidden;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: currentColor;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease-out;
+        }
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        .mobile-menu {
+            transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-gradient-to-r from-indigo-800 to-blue-900 min-h-screen">
+   
+
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-br from-blue-900 to-indigo-800 text-white overflow-hidden">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://media.karousell.com/media/photos/products/2024/1/5/sedot_wc_cipete__paling_murah_1704436535_225afbe4_progressive');"></div>
+            
+            <div class="container mx-auto px-4 py-24 md:py-32 relative z-10">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <!-- Left Side: Company Info -->
+                    <div class="w-full md:w-1/2 mb-12 md:mb-0">
+                        <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                            SEDOT WC<br>DAERAH<br>BANDUNG
+                        </h1>
+                        <p class="text-xl mb-8 text-black-300">Menyediakan Jasa Sedot Wc di Daerah Bandung dan Sekitarnya</p> <br><br>
+                        <p>Tertarik Silahkan Hubungi Kami</p>
+                        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                            <a href="https://api.whatsapp.com/send/?phone=6289646306651&text&type=phone_number&app_absent=0" class="bg-white text-blue-900 font-semibold px-8 py-3 rounded-full hover:bg-blue-100 transition duration-300 text-center">HUBUNGI KAMI</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- Right Side: Features -->
+                    <div class="w-full md:w-1/2 md:pl-12">
+                        <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-8 shadow-2xl">
+                            <h2 class="text-2xl font-semibold mb-6">Mengapa Memilih Jasa Kami?</h2>
+                            <ul class="space-y-4">
+                                <li class="flex items-center">
+                                    <svg class="w-6 h-6 mr-3 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                    <span>Pelayanan Cepat</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-6 h-6 mr-3 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.003 12.003 0 0112 21a12.003 12.003 0 0011.618-9.016z"></path></svg>
+                                    <span>Pelayanan Mudah </span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-6 h-6 mr-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 14h.01M16 10h.01M12 4v.01M12 20v.01M4 12h.01M20 12h.01M8.464 8.464l.007-.007M15.536 15.536l.007-.007M8.464 15.536l.007-.007M15.536 8.464l.007-.007"></path></svg>
+                                    <span>Permasalahan Anda kami selesaikan</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const darkModeToggle = document.getElementById("darkModeToggle");
+        const mobileMenuButton = document.getElementById("mobileMenuButton");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        // Toggle dark mode
+        darkModeToggle.addEventListener("click", () => {
+            document.documentElement.classList.toggle("dark");
+        });
+
+        // Toggle mobile menu visibility
+        mobileMenuButton.addEventListener("click", () => {
+            mobileMenu.classList.toggle("transform", "translate-y-0", "opacity-100");
+        });
+    </script>
+</body>
+</html>
